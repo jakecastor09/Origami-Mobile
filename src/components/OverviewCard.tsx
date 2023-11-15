@@ -1,5 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
+import { useIonRouter } from '@ionic/react';
 
 interface Props {
   imageSrc: string;
@@ -12,8 +13,12 @@ const OverviewCard: React.FC<Props> = ({
   name,
   className,
 }: Props) => {
+  const router = useIonRouter();
+  const handleClick = () => {
+    router.push(`/app/home/${name}`, 'forward');
+  };
   return (
-    <div className={clsx('p-6 rounded-2xl', className)}>
+    <div className={clsx('p-6 rounded-2xl', className)} onClick={handleClick}>
       <h1 className='text-white text-xl capitalize'>{name} Overview</h1>
       <div className='flex justify-end'>
         <img src={imageSrc} width={'80px'} alt='' className='pt-4' />

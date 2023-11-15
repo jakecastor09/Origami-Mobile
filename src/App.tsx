@@ -1,4 +1,5 @@
 import {
+  IonApp,
   IonIcon,
   IonLabel,
   IonRouterOutlet,
@@ -32,40 +33,20 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import './styles/tailwind.css';
 import './theme/variables.css';
+import Gradebook from './pages/Gradebook';
+import Tabs from './pages/Tabs';
 
 setupIonicReact();
 
 const App: React.FC = () => (
-  <IonReactRouter>
-    <IonTabs>
+  <IonApp>
+    <IonReactRouter>
       <IonRouterOutlet>
-        <Route exact component={Login} path={'/'} />
-        <Route exact component={Home} path={'/home'} />
+        <Route exact path={'/'} component={Login} />
+        <Route path={'/app'} component={Tabs} />
       </IonRouterOutlet>
-      {/* Bottom Tab Bar */}
-      <IonTabBar slot='bottom'>
-        <IonTabButton tab='home' href='/home'>
-          <IonIcon icon={home} />
-          <IonLabel>Home</IonLabel>
-        </IonTabButton>
-
-        <IonTabButton tab='payment' href='/payment'>
-          <IonIcon icon={wallet} />
-          <IonLabel>Payment</IonLabel>
-        </IonTabButton>
-
-        <IonTabButton tab='student' href='/student'>
-          <IonIcon icon={person} />
-          <IonLabel>Student</IonLabel>
-        </IonTabButton>
-
-        <IonTabButton tab='profile' href='/profile'>
-          <IonIcon icon={personCircle} />
-          <IonLabel>Profile</IonLabel>
-        </IonTabButton>
-      </IonTabBar>
-    </IonTabs>
-  </IonReactRouter>
+    </IonReactRouter>
+  </IonApp>
 );
 
 export default App;

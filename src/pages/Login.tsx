@@ -17,7 +17,7 @@ const Login: React.FC = () => {
     e.preventDefault();
 
     // if Successfully Login
-    router.push('/home', 'root');
+    router.push('/app/home', 'root', 'replace');
   };
   return (
     <IonPage>
