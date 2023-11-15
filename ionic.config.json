@@ -1,0 +1,7 @@
+{
+  "name": "origami",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
