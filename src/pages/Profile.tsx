@@ -1,14 +1,12 @@
 import { IonContent, IonIcon, IonPage } from '@ionic/react';
 import React from 'react';
-
-import logo from '../assets/logo-sm.png';
-import parent from '../assets/parent-img.png';
-import Container from '../components/Container';
 import {
   chevronForwardOutline,
   logOutOutline,
   peopleOutline,
 } from 'ionicons/icons';
+import logo from '../assets/logo-sm.png';
+import parent from '../assets/parent-img.png';
 const Profile: React.FC = () => {
   return (
     <IonPage>
