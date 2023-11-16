@@ -13,6 +13,7 @@ import {
 import React, { useState } from 'react';
 import AssignmentsListCard from '../components/AssignmentsListCard';
 import AssignmentsEvaluationCard from '../components/AssignmentsEvaluationCard';
+import Container from '../components/Container';
 
 const Assigments: React.FC = () => {
   const [segmentValue, setSegmentValue] = useState('list');
@@ -37,30 +38,32 @@ const Assigments: React.FC = () => {
           <IonLabel>Evaluation</IonLabel>
         </IonSegmentButton>
       </IonSegment>
-      <IonContent className='ion-padding'>
-        {segmentValue === 'list' ? (
-          <div>
-            <h1 className='text-grey900 font-bold mt-8'>New Assignments</h1>
+      <IonContent>
+        <Container>
+          {segmentValue === 'list' ? (
             <div>
-              <AssignmentsListCard />
-              <AssignmentsListCard />
-              <AssignmentsListCard />
-              <AssignmentsListCard />
-              <AssignmentsListCard />
+              <h1 className='text-grey900 font-bold mt-8'>New Assignments</h1>
+              <div>
+                <AssignmentsListCard />
+                <AssignmentsListCard />
+                <AssignmentsListCard />
+                <AssignmentsListCard />
+                <AssignmentsListCard />
+              </div>
             </div>
-          </div>
-        ) : (
-          <div>
-            <h1 className='text-grey900 font-bold mt-8'>Completed</h1>
+          ) : (
             <div>
-              <AssignmentsEvaluationCard />
-              <AssignmentsEvaluationCard />
-              <AssignmentsEvaluationCard />
-              <AssignmentsEvaluationCard />
-              <AssignmentsEvaluationCard />
+              <h1 className='text-grey900 font-bold mt-8'>Completed</h1>
+              <div>
+                <AssignmentsEvaluationCard />
+                <AssignmentsEvaluationCard />
+                <AssignmentsEvaluationCard />
+                <AssignmentsEvaluationCard />
+                <AssignmentsEvaluationCard />
+              </div>
             </div>
-          </div>
-        )}
+          )}
+        </Container>
       </IonContent>
     </IonPage>
   );

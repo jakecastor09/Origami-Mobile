@@ -1,9 +1,19 @@
 import React from 'react';
 import searchImg from '../assets/search-img.png';
+import { useIonRouter } from '@ionic/react';
 
 const AssignmentsEvaluationCard: React.FC = () => {
+  const id = 1;
+  const router = useIonRouter();
+
+  const handleClick = () => {
+    router.push(`/assignments/evaluation/${id}`, 'forward');
+  };
   return (
-    <div className='border border-slate-400 p-4 rounded-xl mt-4'>
+    <div
+      className='border border-slate-400 p-4 rounded-xl mt-4'
+      onClick={handleClick}
+    >
       <div className='flex gap-4'>
         <div>
           <div className='bg-green500 rounded-full inline-block p-3'>

@@ -19,6 +19,7 @@ import '@ionic/react/css/text-alignment.css';
 import '@ionic/react/css/text-transformation.css';
 
 /* Theme variables */
+import AssignmentEvaluationResult from './pages/AssignmentEvaluationResult';
 import Assigments from './pages/Assignments';
 import Gradebook from './pages/Gradebook';
 import Login from './pages/Login';
@@ -35,6 +36,11 @@ const App: React.FC = () => (
         <Route exact path={'/'} component={Login} />
         <Route exact path='/gradebook' component={Gradebook} />
         <Route exact path='/assignments' component={Assigments} />
+        <Route
+          exact
+          path='/assignments/evaluation/:id'
+          component={AssignmentEvaluationResult}
+        />
         <Route path={'/app'} component={Tabs} />
       </IonRouterOutlet>
     </IonReactRouter>
