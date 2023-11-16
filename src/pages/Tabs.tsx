@@ -11,12 +11,14 @@ import React from 'react';
 import { Redirect, Route } from 'react-router';
 
 import Home from './Home';
+import Profile from './Profile';
 
 const Tabs: React.FC = () => {
   return (
     <IonTabs>
       <IonRouterOutlet>
         <Route exact path='/app/home' component={Home} />
+        <Route exact path='/app/profile' component={Profile} />
         <Route exact path='/app'>
           <Redirect to='/app/home' />
         </Route>
