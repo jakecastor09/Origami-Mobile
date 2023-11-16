@@ -11,6 +11,7 @@ import AnnouncementCard from '../components/AnnouncementCard';
 import Container from '../components/Container';
 import OverviewCard from '../components/OverviewCard';
 import OverviewCardContainer from '../components/OverviewCardContainer';
+import NotificationBadge from '../components/NotificationBadge';
 
 const Home: React.FC = () => {
   const router = useIonRouter();
@@ -34,17 +35,23 @@ const Home: React.FC = () => {
               </div>
             </div>
             <div className='flex items-center gap-2'>
-              <IonIcon
-                icon={mailOutline}
-                slot='end'
-                className='text-2xl text-grey900'
-              />
-              <IonIcon
-                icon={notificationsOutline}
-                slot='end'
-                className='text-2xl text-grey900'
-                onClick={() => router.push('/notification', 'forward')}
-              />
+              <div className='relative'>
+                <IonIcon
+                  icon={mailOutline}
+                  slot='end'
+                  className='text-2xl text-grey900'
+                />
+                <NotificationBadge />
+              </div>
+              <div className='relative'>
+                <IonIcon
+                  icon={notificationsOutline}
+                  slot='end'
+                  className='text-2xl text-grey900'
+                  onClick={() => router.push('/notification', 'forward')}
+                />
+                <NotificationBadge />
+              </div>
             </div>
           </header>
 
