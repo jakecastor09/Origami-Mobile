@@ -11,7 +11,6 @@ import React from 'react';
 import { Redirect, Route } from 'react-router';
 
 import Home from './Home';
-import Gradebook from './Gradebook';
 
 const Tabs: React.FC = () => {
   return (
