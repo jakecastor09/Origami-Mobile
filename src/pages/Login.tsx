@@ -21,7 +21,7 @@ const Login: React.FC = () => {
   };
   return (
     <IonPage>
-      <IonContent scrollY={false}>
+      <IonContent>
         <Container>
           <div className='mt-10 py-10 flex flex-col items-center text-center'>
             <img src={logo} alt='Origami' width={'80px'} />

@@ -30,7 +30,7 @@ const AssignmentsEvaluationCard: React.FC = () => {
             </span>
           </div>
         </div>
-        <div className='flex flex-col'>
+        <div className='flex flex-col ml-auto'>
           <div className='px-3 py-1 text-xs rounded-full text-green900 bg-green100'>
             Checked
           </div>

@@ -19,9 +19,9 @@ const AssignmentsListCard = () => {
             </span>
           </div>
         </div>
-        <span className='text-xs translate-y-1 whitespace-nowrap text-grey600 font-bold self-start'>
+        <div className='text-xs translate-y-1 whitespace-nowrap text-grey600 font-bold self-start ml-auto'>
           100 points
-        </span>
+        </div>
       </div>
     </div>
   );
