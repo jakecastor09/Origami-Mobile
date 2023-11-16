@@ -1,4 +1,4 @@
-import { IonContent, IonIcon, IonPage } from '@ionic/react';
+import { IonContent, IonIcon, IonPage, useIonRouter } from '@ionic/react';
 import React from 'react';
 import {
   chevronForwardOutline,
@@ -8,6 +8,7 @@ import {
 import logo from '../assets/logo-sm.png';
 import parent from '../assets/parent-img.png';
 const Profile: React.FC = () => {
+  const router = useIonRouter();
   return (
     <IonPage>
       <IonContent>
@@ -29,7 +30,10 @@ const Profile: React.FC = () => {
             </div>
           </div>
           <div className='grid grid-cols-1 divide-y px-4'>
-            <div className='py-4 font-semibold text-grey-900 text-sm flex items-center gap-2 border-t'>
+            <div
+              className='py-4 font-semibold text-grey-900 text-sm flex items-center gap-2 border-t'
+              onClick={() => router.push('/my-children', 'forward')}
+            >
               <IonIcon
                 icon={peopleOutline}
                 slot='start'

@@ -27,6 +27,7 @@ import Tabs from './pages/Tabs';
 import './styles/tailwind.css';
 import './theme/variables.css';
 import Notification from './pages/Notification';
+import MyChildren from './pages/MyChildren';
 
 setupIonicReact();
 
@@ -37,6 +38,8 @@ const App: React.FC = () => (
         <Route exact path={'/'} component={Login} />
         <Route exact path='/gradebook' component={Gradebook} />
         <Route exact path='/assignments' component={Assigments} />
+        <Route exact path='/my-children' component={MyChildren} />
+
         <Route
           exact
           path='/assignments/evaluation/:id'
