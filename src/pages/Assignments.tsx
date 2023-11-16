@@ -12,6 +12,7 @@ import {
 } from '@ionic/react';
 import React, { useState } from 'react';
 import AssignmentsListCard from '../components/AssignmentsListCard';
+import AssignmentsEvaluationCard from '../components/AssignmentsEvaluationCard';
 
 const Assigments: React.FC = () => {
   const [segmentValue, setSegmentValue] = useState('list');
@@ -44,10 +45,21 @@ const Assigments: React.FC = () => {
               <AssignmentsListCard />
               <AssignmentsListCard />
               <AssignmentsListCard />
+              <AssignmentsListCard />
+              <AssignmentsListCard />
             </div>
           </div>
         ) : (
-          <h1>Evaluation</h1>
+          <div>
+            <h1 className='text-grey900 font-bold mt-8'>Completed</h1>
+            <div>
+              <AssignmentsEvaluationCard />
+              <AssignmentsEvaluationCard />
+              <AssignmentsEvaluationCard />
+              <AssignmentsEvaluationCard />
+              <AssignmentsEvaluationCard />
+            </div>
+          </div>
         )}
       </IonContent>
     </IonPage>
