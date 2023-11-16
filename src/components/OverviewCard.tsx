@@ -15,7 +15,7 @@ const OverviewCard: React.FC<Props> = ({
 }: Props) => {
   const router = useIonRouter();
   const handleClick = () => {
-    router.push(`/app/home/${name}`, 'forward');
+    router.push(`/${name}`, 'forward');
   };
   return (
     <div className={clsx('p-6 rounded-2xl', className)} onClick={handleClick}>

@@ -1,13 +1,4 @@
-import {
-  IonApp,
-  IonIcon,
-  IonLabel,
-  IonRouterOutlet,
-  IonTabBar,
-  IonTabButton,
-  IonTabs,
-  setupIonicReact,
-} from '@ionic/react';
+import { IonApp, IonRouterOutlet, setupIonicReact } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import { Route } from 'react-router-dom';
 
@@ -28,13 +19,12 @@ import '@ionic/react/css/text-alignment.css';
 import '@ionic/react/css/text-transformation.css';
 
 /* Theme variables */
-import { home, person, personCircle, wallet } from 'ionicons/icons';
-import Home from './pages/Home';
+import Assigments from './pages/Assignments';
+import Gradebook from './pages/Gradebook';
 import Login from './pages/Login';
+import Tabs from './pages/Tabs';
 import './styles/tailwind.css';
 import './theme/variables.css';
-import Gradebook from './pages/Gradebook';
-import Tabs from './pages/Tabs';
 
 setupIonicReact();
 
@@ -43,6 +33,8 @@ const App: React.FC = () => (
     <IonReactRouter>
       <IonRouterOutlet>
         <Route exact path={'/'} component={Login} />
+        <Route exact path='/gradebook' component={Gradebook} />
+        <Route exact path='/assignments' component={Assigments} />
         <Route path={'/app'} component={Tabs} />
       </IonRouterOutlet>
     </IonReactRouter>
