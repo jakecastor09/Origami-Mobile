@@ -1,4 +1,4 @@
-import { IonContent, IonIcon, IonPage } from '@ionic/react';
+import { IonContent, IonIcon, IonPage, useIonRouter } from '@ionic/react';
 import { mailOutline, notificationsOutline } from 'ionicons/icons';
 import React from 'react';
 import assignment from '../assets/assignment-img.png';
@@ -13,6 +13,7 @@ import OverviewCard from '../components/OverviewCard';
 import OverviewCardContainer from '../components/OverviewCardContainer';
 
 const Home: React.FC = () => {
+  const router = useIonRouter();
   return (
     <IonPage>
       <IonContent>
@@ -42,6 +43,7 @@ const Home: React.FC = () => {
                 icon={notificationsOutline}
                 slot='end'
                 className='text-2xl text-grey900'
+                onClick={() => router.push('/notification', 'forward')}
               />
             </div>
           </header>

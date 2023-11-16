@@ -26,6 +26,7 @@ import Login from './pages/Login';
 import Tabs from './pages/Tabs';
 import './styles/tailwind.css';
 import './theme/variables.css';
+import Notification from './pages/Notification';
 
 setupIonicReact();
 
@@ -41,6 +42,7 @@ const App: React.FC = () => (
           path='/assignments/evaluation/:id'
           component={AssignmentEvaluationResult}
         />
+        <Route exact path='/notification' component={Notification} />
         <Route path={'/app'} component={Tabs} />
       </IonRouterOutlet>
     </IonReactRouter>
