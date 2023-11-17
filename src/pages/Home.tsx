@@ -31,7 +31,7 @@ const Home: React.FC = () => {
                 <h1 className='font-bold text-xl text-grey900 translate-y-1'>
                   Welcome
                 </h1>
-                <p className='text-softGrey'>Angelica</p>
+                <p className='text-grey400'>Angelica</p>
               </div>
             </div>
             <div className='flex items-center gap-2'>

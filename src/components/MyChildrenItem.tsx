@@ -1,9 +1,11 @@
 import React from 'react';
 import parent from '../assets/parent-img.png';
-
-const MyChildrenItem: React.FC = () => {
+interface Props {
+  id?: string;
+}
+const MyChildrenItem: React.FC<Props> = ({ id }) => {
   return (
-    <div className='flex gap-3 items-center py-4'>
+    <div className='flex gap-3 items-center py-4' id={id}>
       <img src={parent} alt='' className='rounded-full w-12 h-12' />
       <div>
         <h1 className='text-grey900 font-semibold'>Angelica Castor</h1>

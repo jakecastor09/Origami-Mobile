@@ -11,6 +11,7 @@ import React from 'react';
 import Container from '../components/Container';
 import MyChildrenItem from '../components/MyChildrenItem';
 import MyChildrenItemsContainer from '../components/MyChildrenItemsContainer';
+import Alert from '../components/Alert';
 
 const MyChildren: React.FC = () => {
   return (
@@ -26,9 +27,18 @@ const MyChildren: React.FC = () => {
       <IonContent>
         <Container>
           <MyChildrenItemsContainer>
-            <MyChildrenItem />
-            <MyChildrenItem />
-            <MyChildrenItem />
+            <Alert
+              id='children1'
+              children={<MyChildrenItem id='children1' />}
+            />
+            <Alert
+              id='children2'
+              children={<MyChildrenItem id='children2' />}
+            />
+            <Alert
+              id='children3'
+              children={<MyChildrenItem id='children3' />}
+            />
           </MyChildrenItemsContainer>
         </Container>
       </IonContent>
